@@ -61,8 +61,4 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-alias and-connect="mtpfs -o allow_other /media/GT-i9000"
-alias and-disconnect="fusermount -u /media/GT-i9000"
-
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
