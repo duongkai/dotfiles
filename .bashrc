@@ -62,3 +62,13 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias ll='ls -lAhG'
+alias irb='irb --simple-prompt'
+alias rm='rm -i'
+alias rsync='rsync --progress -rtpv'
+alias grep='grep --color=auto'
+alias wget='wget -c'
+      8 alias ip='ipconfig getifaddr'
+      9 alias ccze='ccze -A'
+     10 alias less='less -NRC'
