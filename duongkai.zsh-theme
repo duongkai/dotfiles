@@ -1,4 +1,4 @@
-# Based on ys theme
+# Based on ys theme. Put this file to oh-my-zsh/themes
 # Clean, simple, compatible and meaningful.
 # Tested on Linux, Unix and Windows under ANSI colors.
 # It is recommended to use with a dark background and the font Inconsolata.
