@@ -1,4 +1,3 @@
-# Wezterm terminal configuration
 local wezterm = require 'wezterm'
 local act = wezterm.action
 
@@ -20,9 +19,8 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	use_fancy_tab_bar = false,
 	tab_bar_at_bottom = true,
-  default_cursor_style = "SteadyUnderline",   
-  # Split pane and navigation between panes shortcut
-  keys = {
+    default_cursor_style = "SteadyUnderline",   
+    keys = {
         {
             key = 'b',
             mods = 'CTRL',
@@ -59,5 +57,20 @@ return {
             mods = 'CTRL|SHIFT',
             action = act.ActivatePaneDirection 'Down',
         },
+        {
+            key = tostring(1),
+            mods = "CTRL",
+            action = act.ActivateTab(0),
+        },
+        {
+            key = "RightArrow",
+            mods = "CTRL",
+            action = act.ActivateTabRelative(1),
+        },
+        {
+            key = "LeftArrow",
+            mods = "CTRL",
+            action = act.ActivateTabRelative(-1),
+        }
     }
 }
