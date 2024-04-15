@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 return {
-    --default_prog = {'wsl.exe', '~'},
+	default_prog = {'wsl.exe', '-u', 'kai', '--cd', '~'},
     font = wezterm.font("Comic Code"),
     font_rules = {
         {
@@ -12,15 +12,15 @@ return {
     },
     freetype_load_target = "Normal",
     freetype_load_flags = "NO_HINTING",
-    font_size = 13,
-    cell_width = 1,
-    line_height = 1.2,
-    color_scheme = 'Gruvbox dark, soft (base16)',
-    window_background_opacity = 0.95,
-    hide_tab_bar_if_only_one_tab = true,
-    use_fancy_tab_bar = false,
-    tab_bar_at_bottom = true,
-    default_cursor_style = "SteadyUnderline",
+	font_size = 10,
+    cell_width = 0.95,
+	line_height = 1.2,
+	color_scheme = "Gruvbox Dark (Gogh)",
+	window_background_opacity = 0.95,
+	hide_tab_bar_if_only_one_tab = true,
+	use_fancy_tab_bar = false,
+	tab_bar_at_bottom = true,
+    default_cursor_style = "SteadyUnderline",   
     keys = {
         {
             key = 'b',
@@ -72,6 +72,11 @@ return {
             key = "LeftArrow",
             mods = "CTRL",
             action = act.ActivateTabRelative(-1),
+        },
+        {
+            key = "w",
+            mods = "CTRL",
+            action = act.CloseCurrentTab { confirm = true }
         }
     }
 }
